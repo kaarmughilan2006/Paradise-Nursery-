@@ -3,7 +3,7 @@ import { FiCheck, FiPlus } from 'react-icons/fi'
 import { PiLeaf } from 'react-icons/pi'
 import Navbar from './components/Navbar.jsx'
 import { categories, fallbackPlantImage, plants } from './data/plants.js'
-import { addToCart, selectCartItems } from './redux/CartSlice.jsx'
+import { addItem, selectCartItems } from './redux/CartSlice.jsx'
 import './ProductList.css'
 
 const formatRupees = (amount) =>
@@ -67,7 +67,7 @@ function ProductList() {
                             className={`add-button${isAdded ? ' added' : ''}`}
                             type="button"
                             disabled={isAdded}
-                            onClick={() => dispatch(addToCart(plant))}
+                            onClick={() => dispatch(addItem(plant))}
                             aria-label={isAdded ? `${plant.name} added to cart` : `Add ${plant.name} to cart`}
                           >
                             {isAdded ? <><FiCheck aria-hidden="true" /> Added to Cart</> : <><FiPlus aria-hidden="true" /> Add to Cart</>}
