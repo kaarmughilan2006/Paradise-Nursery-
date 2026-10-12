@@ -1,0 +1,63 @@
+.about-page { padding-bottom: 84px; }
+.about-hero {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: clamp(42px, 7vw, 100px);
+  padding-top: 76px;
+  padding-bottom: 82px;
+}
+.about-copy h1 {
+  max-width: 570px;
+  margin: 23px 0 21px;
+  color: #1b4332;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.8rem, 5.4vw, 5rem);
+  font-weight: 500;
+  line-height: 1.03;
+  letter-spacing: -0.055em;
+}
+.about-copy h1 em { color: #4c956c; font-weight: 400; }
+.about-lead { max-width: 490px; color: #627067; font-size: 1.05rem; line-height: 1.8; }
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #3d7951;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.text-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 28px; color: #2e7d32; font-weight: 700; text-decoration: none; }
+.text-link:hover { gap: 13px; }
+.about-image-wrap { position: relative; min-height: 390px; }
+.about-image-wrap img { width: 100%; height: 465px; border-radius: 8px 130px 8px 8px; object-fit: cover; }
+.image-caption { position: absolute; right: -18px; bottom: 25px; display: flex; align-items: center; gap: 9px; padding: 14px 18px; border-radius: 8px; background: #fff; color: #315d3a; font-size: 0.82rem; font-weight: 700; box-shadow: 0 12px 35px rgba(27, 67, 50, 0.12); }
+.about-story { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 90px; padding-top: 67px; padding-bottom: 67px; border-top: 1px solid #e3ebe2; }
+.story-heading h2, .about-commitment h2 { max-width: 420px; margin: 17px 0 0; color: #1b4332; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2rem, 3.2vw, 3rem); font-weight: 500; line-height: 1.12; letter-spacing: -0.045em; }
+.story-copy p { margin: 0 0 17px; color: #68756d; line-height: 1.85; }
+.about-values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding-top: 16px; padding-bottom: 76px; }
+.value-card { min-height: 250px; padding: 30px; border: 1px solid #e4ece3; border-radius: 12px; background: #fff; }
+.value-card-featured { background: #eaf3e8; border-color: #eaf3e8; }
+.value-icon { display: grid; width: 44px; height: 44px; margin-bottom: 27px; place-items: center; border-radius: 50%; background: #dcebd9; color: #2e7d32; font-size: 1.25rem; }
+.value-card .eyebrow { font-size: 0.67rem; }
+.value-card h2 { margin: 10px 0; color: #1b4332; font-family: Georgia, 'Times New Roman', serif; font-size: 1.45rem; font-weight: 500; line-height: 1.2; }
+.value-card > p:last-child { color: #68756d; font-size: 0.9rem; line-height: 1.65; }
+.about-commitment { display: grid; grid-template-columns: 1fr 0.8fr; align-items: end; gap: 60px; padding: 44px 52px; border-radius: 14px; background: #1b4332; }
+.about-commitment .eyebrow { color: #b7d8ad; }
+.about-commitment h2 { max-width: 550px; color: #fff; }
+.about-commitment > p { margin: 0; color: #d4e4d2; line-height: 1.8; }
+@media (max-width: 760px) {
+  .about-page { padding-bottom: 56px; }
+  .about-hero, .about-story, .about-commitment { grid-template-columns: 1fr; gap: 34px; }
+  .about-hero { padding-top: 52px; padding-bottom: 55px; }
+  .about-image-wrap { min-height: auto; }
+  .about-image-wrap img { height: 350px; border-radius: 8px 85px 8px 8px; }
+  .image-caption { right: 10px; bottom: 14px; }
+  .about-story { padding-top: 48px; padding-bottom: 48px; }
+  .about-values { grid-template-columns: 1fr; padding-bottom: 48px; }
+  .value-card { min-height: 0; }
+  .about-commitment { gap: 20px; padding: 32px 25px; }
+}

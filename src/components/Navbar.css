@@ -1,0 +1,102 @@
+.site-header {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e7eee7;
+  backdrop-filter: blur(14px);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 76px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #1b4332;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.25rem;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+}
+
+.brand strong { font-weight: 700; }
+.brand-mark {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  place-items: center;
+  border-radius: 50% 50% 50% 8px;
+  background: #2e7d32;
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.35rem;
+  font-style: italic;
+}
+
+.nav-links { display: flex; align-items: center; gap: 34px; }
+.nav-link, .nav-cart {
+  color: #536359;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+.nav-link:hover, .nav-link.active, .nav-cart:hover, .nav-cart.active { color: #2e7d32; }
+.nav-cart {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-cart svg { width: 19px; height: 19px; }
+.cart-badge {
+  display: inline-grid;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 5px;
+  place-items: center;
+  border-radius: 999px;
+  background: #2e7d32;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+.mobile-menu-toggle { display: none; }
+
+@media (max-width: 640px) {
+  .navbar { min-height: 68px; }
+  .brand { font-size: 1.1rem; }
+  .brand-mark { width: 35px; height: 35px; }
+  .mobile-menu-toggle {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border: 0;
+    border-radius: 12px;
+    background: #f0f6ef;
+    color: #1b4332;
+    font-size: 1.25rem;
+  }
+  .nav-links {
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 0;
+    left: 0;
+    display: none;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 22px 18px;
+    background: #fff;
+    border-bottom: 1px solid #e7eee7;
+    box-shadow: 0 15px 22px rgba(27, 67, 50, 0.08);
+  }
+  .nav-links-open { display: flex; flex-direction: column; }
+  .nav-link, .nav-cart { padding: 13px 4px; }
+  .nav-cart { width: fit-content; }
+}
